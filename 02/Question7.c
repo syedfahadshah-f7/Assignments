@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-int sorting(int ages[],int prices[], int n){
+void sorting(int ages[],int prices[], int n){
     ages[n];
     prices[n];
     
