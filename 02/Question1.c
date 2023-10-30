@@ -21,7 +21,7 @@ int main() {
     // Calculating Statics
    
     for(int i=0;i<batsman;i++){
-         int totalrun=0, averagerun=0, centuries=0, fifties=0;
+         int totalrun=0, centuries=0, fifties=0;
          printf("\nFOR BATSMAN NUMBER%d:", i+1);
         for(int j=0;j<innings;j++){
             totalrun += arr[i][j];
