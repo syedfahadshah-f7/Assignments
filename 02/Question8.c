@@ -5,12 +5,9 @@ int main() {
     int n,i=0,j=0,k=0,hold;
     printf("Enter Number:");
     scanf("%d", &n);
-    if(n<10){ printf("%d", n);}
+    if(n<10){ printf("number is already single digit:%d", n);}
     while (n>10){
-    if(n<10){
-        printf("%d number is already single digit", n);
-    }
-    else if(n<100 && n>10){
+    if(n<100 && n>10){
        while(n>10){
          if(n<10){ break;}   
         j= n%10;
