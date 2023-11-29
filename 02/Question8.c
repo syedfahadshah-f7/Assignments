@@ -3,9 +3,11 @@
 
 int main() {
     int n,i=0,j=0,k=0,hold;
-    printf("Enter Number:");
+    do{
+    printf("Enter Number and Negative Number Will Exit from program:");
     scanf("%d", &n);
-    if(n<10){ printf("number is already single digit:%d", n);}
+    
+    if(n<10 && n>0){ printf("number is already single digit:%d", n);}
     while (n>10){
     if(n<100 && n>10){
        while(n>10){
@@ -25,8 +27,9 @@ int main() {
             i =hold/10;
             n=i*j*k;
             printf("%d=%d*%d*%d\n", n,i,j,k);
-       }
-    }
-    }
+                }
+             }
+        }
+    }while(n >= 0);printf("program terminated:");
     return 0;
 }
