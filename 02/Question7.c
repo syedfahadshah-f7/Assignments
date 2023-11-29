@@ -1,45 +1,73 @@
 
 #include <stdio.h>
-void sorting(int arr[][],int n){
-    arr[2][n];
-    for(int i=0;i<n;i++){
-        int temp=0;
-        for(int j=0;j<n;j++){
-            if(arr[1][j]>arr[1][j+1]){
-                temp = arr[1][j];
-                arr[1][j]=arr[1][j+1];
-                ages[1][j+1]=temp;
+int temp1=0;
+int temp2 =0;
+
+void ascendingorder(int arr[][2]){
+
+    for(int i = 0; i < 5; i++){
+        for(int j = i+1; j < 5; j++){
+            if(arr[j][0] < arr[i][0]){
+                 temp1 = arr[j][0];
+                arr[j][0] = arr[i][0];
+                arr[i][0] = temp1;
+
+                 temp2 = arr[j][1];
+                arr[j][1] = arr[i][1];
+                arr[i][1] = temp2;
             }
-             if(arr[2][j]<arr[2][j+1]{
-                temp = arr[2][j];
-                arr[2][j]=arr[2][j+1];
-                arr[2][j+1]=temp;
+        }
+    }
+} //end ascendingorder
+
+void descendingorder(int arr[][2]){
+
+    for(int i = 0; i < 5; i++){
+        for(int j = i+1; j < 5 ; j++){
+            if(arr[j][1] > arr[i][1]){
+                 temp1 = arr[j][0];
+                arr[j][0] = arr[i][0];
+                arr[i][0] = temp1;
+
+                temp2= arr[j][1];
+                arr[j][1] = arr[i][1];
+                arr[i][1] = temp2;
             }
-        }// end j loop
-    }// end i loop
-   for(int i=0;i<2;i++){
-   for(int j=0;j<n;j++){
-       printf("%d,", arr[i][j]);
-   }
-    printf("\n");
-       
-   }
-}// end function
+        }
+    }
+} //end descendingorder
 
 int main() {
     int n=5;
-    int arr[2][5]={{15,20,45,35,40},
-                {800,700,400,500,900}};
-                for(int i=0;i<2;i++){
-    printf("Initial Array");
-   for(int j=0;j<n;j++){
+    int arr[5][2]={15,800,45,500,40,900,35,400,20,600};
+    
+    printf("Initial Array\n");
+    printf("Age,price\n");
+    for(int i=0;i<n;i++){
+   for(int j=0;j<2;j++){
+       printf("%d,", arr[i][j]);
+   }
+    printf("\n ");
+   }
+   ascendingorder(arr);
+    printf("\n");
+    printf("Shirt details based on age in ascending order\n");
+    printf("Age,price\n");
+    for(int i=0;i<n;i++){
+   for(int j=0;j<2;j++){
        printf("%d,", arr[i][j]);
    }
     printf("\n");
-       
    }
-    
-    sorting(arr,n);
-  
+   descendingorder(arr);
+  printf("\n");
+   printf("Shirt details based on age in decending order\n");
+    printf("Age,price\n");
+    for(int i=0;i<n;i++){
+   for(int j=0;j<2;j++){
+       printf("%d,", arr[i][j]);
+   }
+    printf("\n");
+   }
     return 0;
 }
